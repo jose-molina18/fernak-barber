@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fernak Barber</title>
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #111;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      animation: fadeInDown 1s ease;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-style: italic;
+      font-size: 1.2em;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 10px;
+      margin: 20px 0;
+      object-fit: cover;
+      max-height: 400px;
+    }
+
+    h2 {
+      color: #111;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      padding: 8px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #d62828;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #a61c1c;
+    }
+
+    /* Galería de imágenes */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Formulario */
+    form {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #111;
+    }
+
+    form input,
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+      resize: vertical;
+    }
+
+    form button {
+      background-color: #1e7f3a;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #155e2a;
+    }
+
+    /* Mapa */
+    .map-container {
+      margin-top: 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2em;
+      }
+
+      section {
+        padding: 20px 15px;
+      }
+    }
+
+    /* Animaciones */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Fernak Barber</h1>
+    <p>Estilo que habla por ti</p>
+  </header>
+
+  <section>
+    <img
+      src="https://images.unsplash.com/photo-1604147495792-57e6dc4a2c4e"
+      alt="Barbería Fernak"
+      class="hero-img"
+    />
+
+    <div class="services">
+      <h2>Servicios</h2>
+      <ul>
+        <li>✂️ Corte de cabello clásico y moderno</li>
+        <li>🧔 Arreglo y diseño de barba</li>
+        <li>💈 Afeitado de calidad</li>
+        <li>🪮 Peinados y productos de estilo</li>
+      </ul>
+    </div>
+
+    <div class="hours">
+      <h2>Horarios</h2>
+      <ul>
+        <li>Lunes a Viernes: 8:00 AM – 9:00 PM</li>
+        <li>Sábado: 8:00 AM – 9:00 PM</li>
+        <li>Domingo:  8:00 AM – 9:00 PM</li>
+      </ul>
+    </div>
+
+    <div class="contact">
+      <h2>Contacto</h2>
+      <p>📍 Dirección: Centro del Moralito, Parroquia el Moralito Estado Zulia</p>
+      <p>📞 Teléfono: +58 424-7840919</p>
+      <a href="https://wa.me/584247840919?text=Hola,%20quiero%20agendar%20una%20cita%20en%20Fernak%20Barber." 
+  target="_blank" 
+  class="btn">
+  ¡Agenda tu cita!
+</a>
+</a>
+    </div>
+
+    <!-- Galería de fotos -->
+    <div class="gallery">
+      <h2>Galería de cortes</h2>
+      <img src="https://i.postimg.cc/sgtGhTcp/1.jpg" alt="Corte 1" />
+      <img src="https://i.postimg.cc/hGTzbVZc/2.jpg" alt="Corte 2" />
+      <img src="https://i.postimg.cc/N0m97RCg/3.jpg" alt="Corte 3" />
+      <img src="https://i.postimg.cc/fbmtjYqT/4.jpg" alt="Corte 4" />
+    </div>
+
+    <section class="reservation">
+      <h2>Reserva tu cita</h2>
+      <form id="bookingForm">
+        <label for="name">Nombre completo</label>
+        <input type="text" id="name" name="name" required placeholder="Tu nombre" />
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required placeholder="ejemplo@mail.com" />
+
+        <label for="phone">Teléfono</label>
+        <input type="tel" id="phone" name="phone" placeholder="(opcional)" />
+
+        <label for="service">Servicio</label>
+        <select id="service" name="service" required>
+          <option value="" disabled selected>Selecciona un servicio</option>
+          <option value="corte">Corte de cabello</option>
+          <option value="barba">Arreglo de barba</option>
+          <option value="afeitado">Afeitado tradicional</option>
+          <option value="peinado">Peinado y estilo</option>
+        </select>
+
+        <label for="date">Fecha deseada</label>
+        <input type="date" id="date" name="date" required min="" />
+
+        <label for="message">Comentarios adicionales</label>
+        <textarea id="message" name="message" rows="3" placeholder="Escribe algo si quieres..."></textarea>
+
+        <button type="submit">Enviar Reserva</button>
+      </form>
+    </
